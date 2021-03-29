@@ -37,14 +37,15 @@ int32_t main()
             int ans=-1;
             for(int i=0;i<=idx;i++)
             {
-                if((v[i].second-v[i].first+1)>=k)
+                int diff=v[i].second-v[i].first+1;
+                if(diff>=k)
                 {
                     ans=v[i].first+k-1;
                     break;
                 }
                 else
                 {
-                    k=k-(v[i].second-v[i].first+1);
+                    k=k-diff;
                 }
             }
         cout<<ans<<endl;
