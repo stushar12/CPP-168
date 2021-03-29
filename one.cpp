@@ -16,7 +16,11 @@ int32_t main()
             cin>>x>>y;
             v.push_back({x,y});
         }
+
+        //sorting the intervals
         sort(v.begin(),v.end());
+
+        //merging overlapping intervals
         int idx=0;
         for(int i=1;i<v.size();i++)
         {
@@ -30,6 +34,8 @@ int32_t main()
                 v[idx]=v[i];
             }
         }
+
+
         while(q--)
         {
             int k;
